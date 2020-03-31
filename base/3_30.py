@@ -1,9 +1,13 @@
 import os
 import time
 from termcolor import *
+import pymysql
+import flask
 
 
 # 打印杨辉三角
+
+
 def main_pascal():
     num = int(input('Number of rows: '))
     yh = [[]] * num
@@ -22,7 +26,8 @@ def main_pascal():
 # 跑马灯
 def main_marquee():
     content = '北京欢迎你，为你开天辟地。。。。。。。。'
-    color = ['grey', 'red', 'green', 'yellow', 'blue', 'magenta', 'cyan', 'white']
+    color = ['grey', 'red', 'green', 'yellow',
+             'blue', 'magenta', 'cyan', 'white']
     i = 0
     while True:
         # 清理屏幕上的输出
@@ -38,5 +43,5 @@ def main_marquee():
 
 
 if __name__ == '__main__':
-    # main_pascal()
-    main_marquee()
+    main_pascal()
+    # main_marquee()
