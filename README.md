@@ -24,6 +24,14 @@
     > > start: 计数起始值（`包括`），默认从 0 开始。例如 `range(5)` 等价于 `range(0, 5)`
     > > stop: 计数终止值（`不包括`）。例如 `range(5)` 是 `[0,1,2,3,4]` 没有 5
     > > step: 步长（递增长度），默认为 1。例如 `range(0, 5)` 等价于 `range(0, 5, 1)`
+  - `enumerate(list)`
+    > 效果：通过此函数处理列表之后再遍历可以同时获得元素 `索引` 和 `值`
+    > 适用场景：for 循环
+
+    ```python
+    for index, elem in enumerate(list):
+        print(index, elem)
+    ```
 
 - `字符串`相关方法
 
@@ -42,6 +50,14 @@
 
   - **append(obj)**
     > 效果：在列表的末尾直接添加 obj
+  - **insert(index, obj)**
+    > 效果：在 index 索引处插入 obj
+  - **extend(list2)**
+    > 效果：在调用者列表的末尾追加新的列表 list2
+  - **remove(obj)**
+    > 效果：在列表中删除 obj
+  - **clear()**
+    > 效果：清空列表
 
 - `if elif else` 的使用方法
 - 在 `for` 循环中，如果循环对象没有使用，可以用 `'_'` 代替，例如：
