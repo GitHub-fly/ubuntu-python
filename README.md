@@ -18,6 +18,7 @@
     > ```
 
   - `range(start, stop, step)`
+  
     > 效果：创建一个整数列表，一般用在 for 循环中  
     > 参数：
     >
@@ -25,6 +26,7 @@
     > > stop: 计数终止值（`不包括`）。例如 `range(5)` 是 `[0,1,2,3,4]` 没有 5
     > > step: 步长（递增长度），默认为 1。例如 `range(0, 5)` 等价于 `range(0, 5, 1)`
   - `enumerate(list)`
+
     > 效果：通过此函数处理列表之后再遍历可以同时获得元素 `索引` 和 `值`
     > 适用场景：for 循环
 
@@ -32,6 +34,12 @@
     for index, elem in enumerate(list):
         print(index, elem)
     ```
+
+  - `sorted(list)`
+
+    > 默认将 list 列表按照首字母升序排序  
+    > `sorted(list, reverse=True)` 倒序排序列表  
+    > `sorted(list, key=len)` 通过 key 关键字参数指定根据字符串长度进行排序而不是默认的字母表顺序
 
 - `字符串`相关方法
 
@@ -58,6 +66,8 @@
     > 效果：在列表中删除 obj
   - **clear()**
     > 效果：清空列表
+  - **list1.sort(reverse=True)**
+    > 给列表对象发出排序消息直接在列表对象上进行排序
 
 - `if elif else` 的使用方法
 - 在 `for` 循环中，如果循环对象没有使用，可以用 `'_'` 代替，例如：
