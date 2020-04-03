@@ -36,6 +36,5 @@ def list_split():
 
 
 if __name__ == '__main__':
-    list_sorted()
-    # list_split()
-
+    # list_sorted()
+    list_split()
