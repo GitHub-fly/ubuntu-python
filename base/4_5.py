@@ -1,5 +1,5 @@
 """
-爬取一页知乎某专栏数据
+爬取'一页'知乎某专栏数据
 """
 
 import requests
@@ -19,7 +19,7 @@ def crawl():
     writer = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL)
     keys = ['id', 'name', 'url', 'gender', 'avatar_urll', 'follower_count']
     writer.writerow(keys)
-    for i in range(10000):
+    for i in range(10):
         # 查询参数
         params = {
             'limit': 20,
@@ -27,6 +27,7 @@ def crawl():
             'include': 'data[*].follower_count, gender, is_followed, is_following'
         }
         response = requests.get(url, headers=headers, params=params)
+        print(response.url)
         # 解析返回的数据
         j = 1
         for dic in response.json().get('data'):
