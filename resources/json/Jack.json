@@ -1,0 +1,19 @@
+{
+    "name": "Jack",
+    "age": 20,
+    "qq": 12345678,
+    "friends": [
+        "Mary",
+        "Sophia"
+    ],
+    "cars": [
+        {
+            "brand": "Audi 奥迪",
+            "max_speed": 280
+        },
+        {
+            "brand": "Benz 奔驰",
+            "max_speed": 320
+        }
+    ]
+}
