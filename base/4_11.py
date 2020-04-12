@@ -40,9 +40,8 @@ def main():
         'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
         'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.116 Safari/537.36'
     }
-    page = 3
-    url = 'https://unsplash.com/napi/photos?page=' + str(page) + '&per_page=30'
-    for page in range(2):
+    for page in range(1, 3):
+        url = 'https://unsplash.com/napi/photos?page=' + str(page) + '&per_page=30'
         time.sleep(0.5)
         response = requests.get(url, headers=headers)
         for item in response.json():
