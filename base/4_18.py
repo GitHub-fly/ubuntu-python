@@ -5,7 +5,7 @@ pip3 install xlrd
 import xlrd
 
 # 1. 打开工作簿
-workbook = xlrd.open_workbook('./resources/excel/班级卡片数据.xlsx')
+workbook = xlrd.open_workbook('./resources/excel/班级卡片数据.xls')
 
 # 2. 工作表
 # 输出所有 sheet 的名字
