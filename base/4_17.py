@@ -17,7 +17,7 @@ def basic_word_cloud():
     w.generate('From tomorrow on, be a happy man.Feed horses, chop wood, travel the world.\
         From tomorrow on, care about food and vegetables. I have a house, facing the sea, spring flowers.')
     # 生成本地图片
-    w.to_file('./resources/img/output1.png')
+    # w.to_file('./resources/img/output1.png')
 
     # 创建词云对象，设置词云图片宽、搞、字体、背景颜色等参数
     # 中文字体需要提前下载中文字体文件
@@ -25,9 +25,10 @@ def basic_word_cloud():
                             height=700,
                             background_color='#eeeeee',
                             font_path='./resources/font/SimHei.ttf')
-    w.generate('从明天起，做一个幸福的人，喂马、劈柴、周游世界，从明天起，关心粮食和蔬菜。 \
-        我有一所房子，面朝大海，春暖花开。从明天起，和每一个亲人通信，告诉他们我的幸福。 \
-        愿你有一个灿烂的前程，愿你有情人终成眷属，愿你在尘世获得幸福，我只愿面朝大海，春暖花开。')
+    # w.generate('从明天起，做一个幸福的人，喂马、劈柴、周游世界，从明天起，关心粮食和蔬菜。 \
+    #     我有一所房子，面朝大海，春暖花开。从明天起，和每一个亲人通信，告诉他们我的幸福。 \
+    #     愿你有一个灿烂的前程，愿你有情人终成眷属，愿你在尘世获得幸福，我只愿面朝大海，春暖花开。')
+    w.generate('刘亚东、李志鹏、司凯旋、司凯超、司晋宇、彭雨茹、赵天宁、张浩杰、张晨星、李瑞杰、张泽欣、韩敏蝶、苏佳妮、田晋婷、司毅卓')
     w.to_file('./resources/img/output2.png')
 
 
@@ -68,7 +69,8 @@ def external_text_word_cloud():
 
     # 读入外部文本文件
     f = open('./resources/text/大鱼海棠.txt', encoding='utf-8')
-    txt = f.read()
+    # txt = f.read()
+    txt = '刘亚东、李志鹏、司凯旋、司凯超、司晋宇、彭雨茹、赵天宁、张浩杰、张晨星、李瑞杰、张泽欣、韩敏蝶、苏佳妮、田晋婷、司毅卓'
     # 更换一下背景颜色和整体风格
     # colormap 参考 https://matplotlib.org/examples/color/colormaps_reference.html
     w = wordcloud.WordCloud(
@@ -85,6 +87,6 @@ def external_text_word_cloud():
 
 
 if __name__ == "__main__":
-    # basic_word_cloud()
+    basic_word_cloud()
     # participle_word_cloud()
     external_text_word_cloud()
